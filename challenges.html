@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenges & Solutions | SkyBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="sticky top-0 z-50 w-full">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 font-bold text-[#0b1120]">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-[#f59e0b]">Risk Management Matrix</h2>
+        </div>
+    </nav>
+
+    <div class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-16 animate-on-scroll">
+            <h1 class="text-4xl font-bold text-[#0b1120] mb-4 serif">We Solved The Hard Problems</h1>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                Implementing drone logistics in mountainous terrain involves regulatory, environmental, and safety challenges. Here is our detailed mitigation strategy.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            
+            <!-- 1. Regulation -->
+            <div class="solution-card bg-white p-6 rounded shadow-sm cursor-pointer solution-trigger animate-on-scroll">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-gavel"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#0b1120]">Regulatory Compliance (BVLOS)</h3>
+                            <p class="text-xs text-slate-500">Problem: Taiwan CAA has strict "Beyond Visual Line of Sight" rules.</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                </div>
+                <div class="hidden mt-6 pl-16 text-slate-600 space-y-4 border-t border-slate-100 pt-4">
+                    <div class="bg-blue-50 p-5 rounded border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-900 text-sm uppercase mb-2">Our Solution: The Regulatory Sandbox</h4>
+                        <p class="text-sm leading-relaxed">
+                            We are not flying illegally. We have partnered with <strong>ThunderTiger Corp</strong> to apply for the <em class="font-bold">Unmanned Vehicle Technology Innovation Experimentation Act</em>. 
+                            <ul class="list-disc ml-5 mt-2 space-y-1">
+                                <li>All flights operate in pre-approved corridors away from population centers.</li>
+                                <li>Pilots hold valid G2 licenses (Professional Rating).</li>
+                                <li>Operations are conducted under the supervision of the Taichung Transportation Bureau.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Weather -->
+            <div class="solution-card bg-white p-6 rounded shadow-sm cursor-pointer solution-trigger animate-on-scroll">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-wind"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#0b1120]">Weather & Terrain Reliability</h3>
+                            <p class="text-xs text-slate-500">Problem: Heping District has strong mountain winds and sudden rain.</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                </div>
+                <div class="hidden mt-6 pl-16 text-slate-600 space-y-4 border-t border-slate-100 pt-4">
+                    <div class="bg-blue-50 p-5 rounded border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-900 text-sm uppercase mb-2">Our Solution: Hybrid Protocol</h4>
+                        <p class="text-sm leading-relaxed">
+                            We don't force flights in bad weather. We use a <strong>Hybrid Model</strong>:
+                            <ul class="list-disc ml-5 mt-2 space-y-1">
+                                <li><strong>Good Weather:</strong> Drones deliver hot meals (15 mins).</li>
+                                <li><strong>Bad Weather (>10m/s wind):</strong> System alerts "Ground Force". Local volunteer motorcyclists take over.</li>
+                                <li><strong>Disaster Prep:</strong> Drones pre-stock 3 days of dried food at elders' homes before typhoon seasons.</li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Safety -->
+            <div class="solution-card bg-white p-6 rounded shadow-sm cursor-pointer solution-trigger animate-on-scroll">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-xl"><i class="fas fa-user-shield"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[#0b1120]">Elderly Safety & Interaction</h3>
+                            <p class="text-xs text-slate-500">Problem: Spinning propellers are dangerous for frail seniors.</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-down text-slate-400 transition-transform duration-300"></i>
+                </div>
+                <div class="hidden mt-6 pl-16 text-slate-600 space-y-4 border-t border-slate-100 pt-4">
+                    <div class="bg-blue-50 p-5 rounded border-l-4 border-blue-500">
+                        <h4 class="font-bold text-blue-900 text-sm uppercase mb-2">Our Solution: The Winch-Drop System</h4>
+                        <p class="text-sm leading-relaxed">
+                            Our drones <strong>never land</strong> at the beneficiary's home.
+                            <br><br>
+                            1. Drone hovers at 15 meters altitude (safe distance).<br>
+                            2. Package is lowered via a tether winch.<br>
+                            3. Package auto-detaches upon touching the ground.<br>
+                            <br>
+                            This ensures zero physical contact between the elder and the drone mechanics.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

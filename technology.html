@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology | SkyBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body class="bg-[#0b1120] text-white">
+
+    <nav class="border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="font-bold tracking-tight">SKYBRIDGE <span class="text-[#0ea5e9]">/ LABS</span></a>
+            <a href="index.html" class="text-xs font-mono text-slate-500 hover:text-white">EXIT</a>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <h1 class="text-3xl font-mono mb-4">Autonomous Flight Stack</h1>
+        <p class="text-slate-400 mb-12 max-w-2xl">
+            We develop custom firmware and path-planning algorithms to ensure safety in high-altitude environments.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Python -->
+            <div class="bg-[#1e293b] rounded border border-slate-700 p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-mono text-[#f59e0b]">energy_opt.py</h3>
+                    <span class="text-xs bg-black px-2 py-1 rounded">Python</span>
+                </div>
+                <pre><code class="language-python">
+# Energy Optimization for Mountain Terrain
+# Calculates battery drain based on ascent/descent
+
+def calculate_energy(path):
+    total_energy = 0
+    for i in range(len(path)-1):
+        p1, p2 = path[i], path[i+1]
+        dist = get_dist(p1, p2)
+        climb = p2.z - p1.z
+        
+        # Gravity Penalty Factor
+        penalty = 1.0
+        if climb > 0: penalty = 2.5 
+        
+        total_energy += dist * penalty * BURN_RATE
+        
+    return total_energy
+                </code></pre>
+            </div>
+
+            <!-- C++ -->
+            <div class="bg-[#1e293b] rounded border border-slate-700 p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-mono text-[#0ea5e9]">firmware_core.cpp</h3>
+                    <span class="text-xs bg-black px-2 py-1 rounded">C++</span>
+                </div>
+                <pre><code class="language-cpp">
+// Flight Controller Safety Failsafe
+// Checks battery voltage at 400Hz
+
+void check_safety_loop() {
+    float voltage = read_battery();
+    
+    if (voltage < CRITICAL_VOLTAGE) {
+        // Trigger Return to Home
+        set_mode(RTL);
+        log_error("CRITICAL BATTERY");
+    }
+    
+    // Wind Gust Compensation
+    if (imu.accel_x > WIND_THRESHOLD) {
+        compensate_lean_angle();
+    }
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyBridge Foundation | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Libs -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="sticky top-0 z-50 w-full">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#0b1120] text-white flex items-center justify-center rounded">
+                    <i class="fas fa-paper-plane"></i>
+                </div>
+                <div>
+                    <h1 class="font-bold text-xl leading-none tracking-tight">SKYBRIDGE</h1>
+                    <p class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Foundation</p>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link active">Overview</a>
+                <a href="challenges.html" class="nav-link">Challenges & Solutions</a>
+                <a href="financials.html" class="nav-link">Financial Transparency</a>
+                <a href="technology.html" class="nav-link">Technology</a>
+            </div>
+            <a href="donate.html" class="btn-primary text-xs">Donate Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-32 pb-40 bg-[#0b1120] text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-30">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0b1120] to-transparent z-10"></div>
+            <img src="https://images.unsplash.com/photo-1506947411487-a56738267384?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-20 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="animate-on-scroll">
+                <span class="inline-block py-1 px-3 border border-blue-500 text-blue-400 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                    Operation Heping: Taiwan
+                </span>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 serif leading-tight">
+                    Logistics for <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">Humanity.</span>
+                </h1>
+                <p class="text-xl text-slate-300 max-w-lg mb-10 font-light leading-relaxed">
+                    Replacing 90-minute truck drives with 15-minute autonomous flights. We deliver food and hope to isolated elderly communities.
+                </p>
+                <div class="flex gap-4">
+                    <a href="challenges.html" class="bg-white text-[#0b1120] px-8 py-3 rounded font-bold uppercase text-sm hover:bg-blue-50 transition">How It Works</a>
+                    <a href="technology.html" class="border border-slate-600 text-white px-8 py-3 rounded font-bold uppercase text-sm hover:border-white transition">Dev Portal</a>
+                </div>
+            </div>
+            
+            <!-- Live Dashboard Card -->
+            <div class="bg-white rounded-lg p-6 text-[#0b1120] shadow-2xl animate-on-scroll border-t-4 border-[#0ea5e9]">
+                <div class="flex justify-between items-center mb-4 border-b border-slate-100 pb-2">
+                    <span class="text-xs font-mono font-bold text-slate-400">LIVE OPS MAP</span>
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                </div>
+                <div id="map" class="h-64 bg-slate-100 rounded mb-4 z-10"></div>
+                <div class="grid grid-cols-3 gap-2 text-center">
+                    <div>
+                        <div class="text-2xl font-bold serif">120+</div>
+                        <div class="text-[10px] uppercase text-slate-500">Elders</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold serif text-[#0ea5e9]">0$</div>
+                        <div class="text-[10px] uppercase text-slate-500">Food Cost</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold serif text-[#10b981]">83%</div>
+                        <div class="text-[10px] uppercase text-slate-500">Time Saved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Partners Strip -->
+    <div class="bg-slate-50 border-y border-slate-200 py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-center gap-12 opacity-60 grayscale">
+            <div class="font-bold text-xl"><i class="fas fa-university mr-2"></i>Taichung Social Bureau</div>
+            <div class="font-bold text-xl"><i class="fas fa-utensils mr-2"></i>Food Bank</div>
+            <div class="font-bold text-xl"><i class="fas fa-microchip mr-2"></i>ThunderTiger</div>
+        </div>
+    </div>
+
+</body>
+</html>

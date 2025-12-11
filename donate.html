@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Us | SkyBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="sticky top-0 z-50 w-full">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 font-bold text-[#0b1120]">
+                <span>&larr; Back</span>
+            </a>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-[#f59e0b]">Fundraising 2025</h2>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded shadow-xl overflow-hidden border-t-4 border-[#0ea5e9]">
+            <div class="p-10 text-center bg-[#0b1120] text-white">
+                <h1 class="text-3xl font-bold mb-2 serif">Invest in Impact</h1>
+                <p class="text-slate-300">Your donation powers the flight. We handle the rest.</p>
+            </div>
+            
+            <div class="p-10">
+                <!-- Calculator -->
+                <div class="mb-10">
+                    <label class="block text-sm font-bold text-slate-700 mb-4 uppercase tracking-wide">Select Amount</label>
+                    <div class="grid grid-cols-3 gap-4 mb-6">
+                        <button onclick="updateImpact(500)" class="p-4 border border-slate-200 rounded hover:bg-blue-50 font-bold transition text-xl">$500</button>
+                        <button onclick="updateImpact(2000)" class="p-4 border-2 border-[#0ea5e9] bg-blue-50 rounded font-bold transition text-xl text-[#0ea5e9] relative">
+                            $2,000
+                            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#0ea5e9] text-white text-[10px] px-2 py-0.5 rounded uppercase">1 Flight</span>
+                        </button>
+                        <button onclick="updateImpact(5000)" class="p-4 border border-slate-200 rounded hover:bg-blue-50 font-bold transition text-xl">$5,000</button>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded p-6 flex items-center gap-6">
+                        <div class="w-16 h-16 bg-[#f59e0b] rounded-full flex items-center justify-center text-3xl text-white">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs uppercase font-bold text-slate-400">Your Impact</div>
+                            <div class="text-lg font-bold text-slate-800 leading-tight mt-1">
+                                Funds <span id="impact-flights" class="text-[#0ea5e9]">10</span> flights, delivering <span id="impact-meals" class="text-[#0ea5e9]">30</span> meals.
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" id="custom-amount" value="2000">
+                </div>
+
+                <button class="w-full bg-[#0ea5e9] hover:bg-[#0284c7] text-white font-bold py-4 rounded text-lg uppercase tracking-widest shadow-lg transition">Donate Securely</button>
+            </div>
+        </div>
+        
+        <!-- CSR Section -->
+        <div class="mt-12 text-center">
+            <h3 class="font-bold text-[#0b1120] mb-4">Corporate Partners</h3>
+            <div class="flex justify-center gap-6 grayscale opacity-60">
+                <span class="text-xl font-bold">ThunderTiger</span>
+                <span class="text-xl font-bold">Garmin</span>
+                <span class="text-xl font-bold">FoodBank</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

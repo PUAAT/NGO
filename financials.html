@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Transparency | SkyBridge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="sticky top-0 z-50 w-full">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 font-bold text-[#0b1120]">
+                <span>&larr; Back</span>
+            </a>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-[#0ea5e9]">Annual Report 2025</h2>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        
+        <div class="mb-16 text-center animate-on-scroll">
+            <h1 class="text-4xl font-bold text-[#0b1120] mb-4 serif">Where Does The Money Go?</h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                We believe in radical transparency. Because our food supplies are 100% donated by the Food Bank, 
+                <span class="text-[#0ea5e9] font-bold">your donation funds the logistics to get it there.</span>
+            </p>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 animate-on-scroll">
+            <div class="bg-white p-6 rounded shadow-sm border-t-4 border-[#0b1120]">
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Total Budget</div>
+                <div class="text-3xl font-bold text-[#0b1120] mt-2 mono">3,100,000 TWD</div>
+            </div>
+            <div class="bg-white p-6 rounded shadow-sm border-t-4 border-[#f59e0b]">
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Food Cost</div>
+                <div class="text-3xl font-bold text-[#f59e0b] mt-2 mono">0 TWD</div>
+                <div class="text-xs text-slate-400 mt-1">Donated by Food Bank</div>
+            </div>
+            <div class="bg-white p-6 rounded shadow-sm border-t-4 border-[#0ea5e9]">
+                <div class="text-xs text-slate-500 uppercase tracking-widest font-bold">Crowdfunding Goal</div>
+                <div class="text-3xl font-bold text-[#0ea5e9] mt-2 mono">500,000 TWD</div>
+                <div class="text-xs text-slate-400 mt-1">To cover pilot training</div>
+            </div>
+        </div>
+
+        <!-- Charts & Narrative -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16 animate-on-scroll">
+            <div class="bg-white p-8 rounded shadow-sm">
+                <h3 class="font-bold text-lg mb-6 text-[#0b1120]">Allocation of Funds</h3>
+                <div class="h-64 relative">
+                    <canvas id="budgetChart"></canvas>
+                </div>
+                <p class="text-xs text-slate-500 mt-6 leading-relaxed">
+                    *<strong>Hardware (40%)</strong>: Heavy-lift drones are capital intensive in Year 1.<br>
+                    *<strong>HR (25%)</strong>: We pay fair wages to local youth pilots, creating jobs in the rural area.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <h3 class="font-bold text-lg text-[#0b1120]">Detailed Expenditure Table</h3>
+                <div class="bg-white rounded border border-slate-200 overflow-hidden">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-slate-100 text-slate-500 uppercase font-bold text-xs">
+                            <tr>
+                                <th class="px-6 py-3">Item</th>
+                                <th class="px-6 py-3 text-right">Cost (TWD)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr>
+                                <td class="px-6 py-4 font-bold">Drone Fleet (3 Units)</td>
+                                <td class="px-6 py-4 text-right mono">1,500,000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Pilot Training (HR)</td>
+                                <td class="px-6 py-4 text-right mono">800,000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Hub Infrastructure</td>
+                                <td class="px-6 py-4 text-right mono">500,000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">R&D Software</td>
+                                <td class="px-6 py-4 text-right mono">200,000</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Insurance & Admin</td>
+                                <td class="px-6 py-4 text-right mono">100,000</td>
+                            </tr>
+                            <tr class="bg-blue-50 font-bold text-[#0b1120]">
+                                <td class="px-6 py-4">TOTAL</td>
+                                <td class="px-6 py-4 text-right mono">3,100,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
